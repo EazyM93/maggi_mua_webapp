@@ -5,6 +5,10 @@
     display: flex;
     justify-content: space-between;
     list-style: none;
+    a.active-link{
+      font-weight: bold;
+      border-bottom: 2px solid black;
+    }
   }
   a{
     text-decoration: none;
