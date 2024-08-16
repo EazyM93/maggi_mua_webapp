@@ -1,0 +1,19 @@
+#images-container{
+  padding: 0.3em;
+  flex-direction: column;
+  width: fit-content;
+  border: 1px dotted rgb(229, 229, 229);
+}
+
+#first-row{
+  border-bottom: 3px solid black;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
+
+.img-up{
+  border-right: 3px solid black;
+}
