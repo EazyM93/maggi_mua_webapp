@@ -1,9 +1,5 @@
 #navbar-container{
-  padding: 0 20em;
-  margin: 0 0 50px 0;
   #routing-list{
-    display: flex;
-    justify-content: space-between;
     list-style: none;
     a.active-link{
       font-weight: bold;
@@ -15,3 +11,10 @@
     color: black;
   }
 }
+
+@media (min-width: 1335px){
+  .custom-padding{
+    padding: 0 10rem;
+  }
+}
+

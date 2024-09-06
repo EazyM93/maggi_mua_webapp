@@ -1,25 +1,23 @@
-<div id="home-container">
+<div id="home-container" class="flex flex-column align-items-center">
 
   <!-- images -->
-  <div id="images-container" class="flex-center">
-    <div id="first-row" class="flex-center">
-      <img src="https://i.imgur.com/JmuGIqO.jpg" alt="model_1_face" width="200px" height="200px" class="img-up" >
-      <img src="https://i.imgur.com/eCZAQgc.jpeg" alt="model_1_face" width="200px" height="200px" class="img-up" >
-      <img src="https://i.imgur.com/xMl96mB.jpeg" alt="model_1_face" width="200px" height="200px" class="img-up" >
-      <img src="https://i.imgur.com/xd63TN9.jpeg" alt="model_1_face" width="200px" height="200px" >
+  <div id="images-container" class="flex flex-column flex-wrap max-w-max p-2 mb-5">
+    <div id="first-row" class="flex justify-content-center flex-wrap">
+      @for (model_image of modelsArrayFirstRow; track $index; let lastRow = $last) {
+        <img [src]="model_image" alt="model_1_face" width="200px" height="200px" [ngClass]="{'img-up': !lastRow}" >
+      }
     </div>
-    <div id="second-row" class="flex-center">
-      <img src="https://i.imgur.com/nqn9JHF.jpeg" alt="model_1_face" width="200px" height="200px" class="img-up" >
-      <img src="https://i.imgur.com/KBzgSrW.jpeg" alt="model_1_face" width="200px" height="200px" class="img-up" >
-      <img src="https://i.imgur.com/FLrVUnR.jpeg" alt="model_1_face" width="200px" height="200px" class="img-up" >
-      <img src="https://i.imgur.com/2tkY50X.jpeg" alt="model_1_face" width="200px" height="200px" >
+    <div id="second-row" class="flex justify-content-center flex-wrap">
+      @for (model_image of modelsArraySecondRow; track $index; let lastRow = $last) {
+        <img [src]="model_image" alt="model_1_face" width="200px" height="200px" [ngClass]="{'img-up': !lastRow}" >
+      }
     </div>
   </div>
 
   <!-- text description -->
-  <div id="description-container">
-    <p>Testi di prova.</p>
-    <p>Buonanotte, prova finale.</p>
+  <div id="description-container" class="text-center">
+    <p>Mi chiamo Fabiana e sono una make up artist con un bel culetto</p>
+    <p>Ho fatto un corso a Roma e adesso so fare i trucchetti pure alle cappelle</p>
   </div>
 
 </div>
