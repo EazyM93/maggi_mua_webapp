@@ -1,9 +1,15 @@
-<div id="main-container">
+<div id="main-container" class="p-3">
+
+  <!-- contatti rapidi -->
+  <div id="fast-contact" class="border-bottom-1 px-5 pb-2 mx-8 mb-5">
+    <a href="tel:+393451173746"><p><i class="pi pi-phone mr-2"></i>+39 3451173746</p></a>
+  </div>
 
   <!-- header della pagina -->
-  <div id="header-container" class="mb-5">
-    <h1 id="page-title">FABIANA MAGGI</h1>
-    <app-navbar class="hidden sm:block"></app-navbar>
+  <div id="header-container" class="flex justify-content-center align-items-center gap-5">
+    <a routerLink="/home" routerLinkActive="active-link"><p>HOME</p></a>
+    <p id="page-title" class="text-6xl p-3">Fabiana Maggi</p>
+    <a routerLink="/contatti" routerLinkActive="active-link"><p>CONTATTI</p></a>
   </div>
 
   <!-- body -->
