@@ -1,23 +1,42 @@
-<div id="main-container" class="p-3">
+<div id="main-container" class="py-3 sm:px-8 px-4">
 
   <!-- contatti rapidi -->
-  <div id="fast-contact" class="flex justify-content-between border-bottom-1 px-5 pb-2 mx-8 mb-6">
-    <div class="flex gap-6">
-      <a href="tel:+393451173746"><p><i class="pi pi-phone mr-2"></i>+39 3451173746</p></a>
-      <a href="mailto:fabianamag97@gmail.com"><p><i class="pi pi-envelope mr-2"></i>fabianamag97&#64;gmail.com</p></a>
+  <div id="fast-contact" class="hidden md:flex justify-content-between align-items-center border-bottom-1 px-5 pb-2 mb-6">
+    <div class="flex gap-6 mr-6">
+      <a routerLink="/home" routerLinkActive="active-link">
+        <span>HOME</span>
+      </a>
+      <a routerLink="/portfolio" routerLinkActive="active-link">
+        <span>PORTFOLIO</span>
+      </a>
     </div>
-    <div class="flex">
-      <a href="https://www.instagram.com/itsfabialousmua"><i class="pi pi-instagram mr-2"></i>itsfabialousmua</a>
+    <div class="flex gap-3 lg:gap-6">
+      <a href="tel:+393451173746">
+        <p class="flex align-items-center">
+          <i class="hidden lg:block pi pi-phone mr-2"></i>
+          <span class="hidden lg:block white-space-nowrap">+39 3451173746</span>
+          <i class="lg:hidden pi pi-phone custom-icon"></i>
+        </p>
+      </a>
+      <a href="mailto:fabianamag97@gmail.com">
+        <p class="flex align-items-center">
+          <i class="hidden lg:block pi pi-envelope mr-2"></i>
+          <span class="hidden lg:block white-space-nowrap">fabianamag97&#64;gmail.com</span>
+          <i class="lg:hidden pi pi-envelope custom-icon"></i>
+        </p>
+      </a>
+      <a href="https://www.instagram.com/itsfabialousmua" class="flex align-items-center">
+        <i class="hidden lg:block pi pi-instagram mr-2"></i>
+        <span class="hidden lg:block white-space-nowrap">itsfabialousmua</span>
+        <i class="lg:hidden pi pi-instagram custom-icon"></i>
+      </a>
     </div>
   </div>
 
   <!-- header della pagina -->
-  <div id="header-container" class="flex justify-content-center align-items-center mb-6">
-    <p id="page-title" class="text-6xl p-3">Fabiana Maggi</p>
-  </div>
-
-  <div class="flex justify-content-center align-items-center gap-5">
-    <a [routerLink]="'/' + goToComponent" routerLinkActive="active-link" class="font-bold text-2xl"><p>&gt;&gt; {{ goToComponent?.toUpperCase() }} &lt;&lt;</p></a>
+  <div class="flex flex-column justify-content-center align-items-center mb-6">
+    <p id="page-title" class="text-6xl custom-text">Fabiana Maggi</p>
+    <p id="page-title" class="text-2xl custom-text">PRO MAKE-UP ARTIST</p>
   </div>
 
   <!-- body -->

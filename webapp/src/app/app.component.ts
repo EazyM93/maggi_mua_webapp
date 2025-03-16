@@ -16,6 +16,8 @@ export class AppComponent implements OnInit{
   actualComponent: string | undefined;
   goToComponent: string | undefined;
 
+  mainImg = 'https://imgur.com/dh8DUyt';
+
   ngOnInit(): void {
     this.handleNavigation();
   }
