@@ -44,11 +44,11 @@ export class HomeComponent implements OnInit{
     if(modelsLength < this.maxImgs){
       const [firstArray, secondArray] = division_under_eigth(this.models);
       this.modelsArrayFirstRow = firstArray;
-      this.modelsArraySecondRow = secondArray;console.log('meno di 12')
+      this.modelsArraySecondRow = secondArray;
     }else{
       const shuffledArray: string[] = this.models.sort(() => Math.random() - 0.5);
       this.modelsArrayFirstRow = shuffledArray.slice(0, 6);
-      this.modelsArraySecondRow = shuffledArray.slice(6, 12);console.log('più di 12')
+      this.modelsArraySecondRow = shuffledArray.slice(6, 12);
     }
 
     // funzione gestione con meno di 8 foto
