@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 
 import { GalleriaModule } from 'primeng/galleria';
-import { ContattiComponent } from './components/contatti/contatti.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContattiComponent
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,
