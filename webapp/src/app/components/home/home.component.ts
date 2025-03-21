@@ -12,54 +12,27 @@ export class HomeComponent implements OnInit{
 
   // array delle immagini provenienti da imgur
   models: string[] = [
-    'https://imgur.com/xlu30dy.jpeg',
-    'https://i.imgur.com/JmuGIqO.jpg',
-    'https://i.imgur.com/eCZAQgc.jpeg',
-    'https://i.imgur.com/xMl96mB.jpeg',
-    'https://i.imgur.com/xd63TN9.jpeg',
-    'https://i.imgur.com/nqn9JHF.jpeg',
-    'https://i.imgur.com/KBzgSrW.jpeg',
-    'https://i.imgur.com/FLrVUnR.jpeg',
-
-    // ripetizioni di prova
-    'https://i.imgur.com/xd63TN9.jpeg',
-    'https://i.imgur.com/nqn9JHF.jpeg',
-    'https://i.imgur.com/KBzgSrW.jpeg',
-    'https://i.imgur.com/FLrVUnR.jpeg',
+    'https://imgur.com/JmuGIqO.jpg',
+    'https://imgur.com/eCZAQgc.jpeg',
+    'https://imgur.com/xMl96mB.jpeg',
+    'https://imgur.com/xd63TN9.jpeg',
+    'https://imgur.com/nqn9JHF.jpeg',
+    'https://imgur.com/KBzgSrW.jpeg',
+    'https://imgur.com/FLrVUnR.jpeg',
+    'https://imgur.com/qAGXslT.jpeg',
+    'https://imgur.com/7qMrrIr.jpeg',
+    'https://imgur.com/42eUNOJ.jpeg',
+    'https://imgur.com/hGhE0le.jpeg',
+    'https://imgur.com/7oxQSgw.jpeg'
   ];
 
-  modelsArrayFirstRow: string[] = [];
-  modelsArraySecondRow: string[] = [];
+  testoSposa = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur.';
 
+  testoModa = 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur.';
 
   ngOnInit(): void {
-    this.image_rows_generator();
-  }
-
-  // metodo per assegnare le immagini dei modelli alle varie righe
-  private image_rows_generator(){
-
-    const modelsLength: number = this.models.length;
-
-    if(modelsLength < this.maxImgs){
-      const [firstArray, secondArray] = division_under_eigth(this.models);
-      this.modelsArrayFirstRow = firstArray;
-      this.modelsArraySecondRow = secondArray;
-    }else{
-      const shuffledArray: string[] = this.models.sort(() => Math.random() - 0.5);
-      this.modelsArrayFirstRow = shuffledArray.slice(0, 6);
-      this.modelsArraySecondRow = shuffledArray.slice(6, 12);
-    }
-
-    // funzione gestione con meno di 8 foto
-    function division_under_eigth(models: string[]){
-      const rowLength: number = Math.floor(modelsLength / 2);
-      const shuffledArray: string[] = models.sort(() => Math.random() - 0.5);
-      const firstArray = shuffledArray.slice(0, rowLength);
-      const secondArray = shuffledArray.slice(rowLength, rowLength * 2);
-      return [firstArray, secondArray];
-    }
 
   }
+
 
 }
