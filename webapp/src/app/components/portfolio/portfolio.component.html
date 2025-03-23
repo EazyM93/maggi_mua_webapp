@@ -1,1 +1,16 @@
-<p>portfolio works!</p>
+<div class="flex flex-column justify-content-center">
+  <div class="flex flex-wrap justify-content-center align-items-center">
+    @for(portrait of portraitSet; track portrait){
+      <p-image [src]="portrait" alt="Image" width="400" class="scroll-image mb-3 sm:mb-0" />
+    }
+  </div>
+
+  <div class="flex flex-wrap justify-content-center align-items-center">
+    @for(vertical of verticalSet; track vertical){
+      <p-image [src]="vertical" alt="Image" width="400" class="scroll-image mb-3 sm:mb-0" />
+    }
+  </div>
+
+</div>
+
+

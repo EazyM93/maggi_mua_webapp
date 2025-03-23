@@ -25,3 +25,21 @@ a{
   padding: 10px;
   border-radius: 20px;
 }
+
+::ng-deep .customButtonMenu{
+  .p-button{
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding: 10px 0;
+  }
+  .p-button-icon{
+    padding: 0;
+  }
+}
+
+::ng-deep .sidebarCustom{
+  .p-sidebar-close{
+    margin: 10px 0 0 10px;
+  }
+}

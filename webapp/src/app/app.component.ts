@@ -1,4 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, ActivationEnd, Router } from '@angular/router';
 
 @Component({
@@ -8,7 +9,11 @@ import { ActivatedRoute, ActivationEnd, Router } from '@angular/router';
 })
 export class AppComponent implements OnInit{
 
+  private titleService = inject(Title);
+
   title = 'webapp';
+
+  sidebarVisible: boolean = false;
 
   private route = inject(ActivatedRoute);
   private router = inject(Router);

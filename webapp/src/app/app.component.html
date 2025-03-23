@@ -1,5 +1,21 @@
 <div id="main-container" class="py-3 sm:px-8 px-4">
 
+  <p-sidebar class="sidebarCustom" [(visible)]="sidebarVisible">
+    <h3 class="pl-4 my-5">Fabiana Maggi</h3>
+
+    <div class="flex flex-column pl-6 gap-3">
+      <a routerLink="/home" (click)="sidebarVisible = false" routerLinkActive="active-link">
+        <span><span class="pi pi-home mr-3"></span>HOME</span>
+      </a>
+      <a routerLink="/portfolio" (click)="sidebarVisible = false" routerLinkActive="active-link">
+        <span><span class="pi pi-images mr-3"></span>PORTFOLIO</span>
+      </a>
+    </div>
+
+  </p-sidebar>
+
+  <p-button class="customButtonMenu sm:hidden" (onClick)="sidebarVisible = true" icon="pi pi-bars" />
+
   <!-- contatti rapidi -->
   <div id="fast-contact" class="hidden md:flex justify-content-between align-items-center border-bottom-1 px-5 pb-2 mb-6">
     <div class="flex gap-6 mr-6">

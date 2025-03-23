@@ -5,8 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+
 import { GalleriaModule } from 'primeng/galleria';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { ImageModule } from 'primeng/image';
+import { ButtonModule } from 'primeng/button';
+import { SidebarModule } from 'primeng/sidebar';
 
 @NgModule({
   declarations: [
@@ -17,9 +22,14 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GalleriaModule
+    GalleriaModule,
+    ImageModule,
+    ButtonModule,
+    SidebarModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

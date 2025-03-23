@@ -12,13 +12,13 @@ const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
-    title: 'Home',
+    title: 'Maggi MUA | Home',
     data: { comp: 'home' }
   },
   {
     path: 'portfolio',
     component: PortfolioComponent,
-    title: 'Portfolio',
+    title: 'Maggi MUA | Portfolio',
     data: { comp: 'portfolio' }
   }
 ];
